@@ -107,7 +107,7 @@ include '../src/conectaBanco.php';
         </ul>
     </nav>
 <div class="container my-5 main"> 
-  <h2>Novo produto</h2>
+  <h2>Editar produto</h2>
 
     <?php 
       if (!empty($errorMessage)) {

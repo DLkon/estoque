@@ -27,7 +27,7 @@ verification('/index.php')
         </ul>
     </nav>
     <main>
-        <div class="title"><h2>//Estoque</h2><a role="button" href="../processos/criarProduto.php"id="criar" class="btn btn-dark"><img src="../img/plus.svg" alt="">criar Produto</a></div>
+        <div class="title"><h2>//Lista de Produtos</h2><a role="button" href="../processos/criarProduto.php"id="criar" class="btn btn-dark"><img src="../img/plus.svg" alt="">criar Produto</a></div>
         <table class="table table-bordered">
             <thead>
                 <tr>

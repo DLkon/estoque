@@ -27,6 +27,7 @@ verification('/index.php')
     $supplier_status = $_POST["supplier_status"];
 
     do {
+      //verifica se campo esta vazio
         if (empty($name) || empty($email) || empty($cnpj) || empty($phone) || empty($address) || empty($category) || empty($supplier_status)) {
           $errorMessage = "Todos os campos são necessarios";
           break;
