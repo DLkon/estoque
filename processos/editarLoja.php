@@ -101,7 +101,7 @@ $sucessMessage = "";
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Loja</title>
+  <title>Editar Loja</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -109,18 +109,18 @@ $sucessMessage = "";
 </head>
 <body>
 <nav class="nav-menu">
-        <div class="logo"><h1>Ako box</h1></div>
+        <div class="logo"><img class="img-logo" src="../img/box.png" alt=""></div>
         <ul class="list">
-            <li class="links"><img src="../img/home.svg" alt="icone de casa"><a href="home.html">Home</a></li>
+            <li class="links"><img src="../img/home.svg" alt="icone de casa"><a href="../src/home.php">Home</a></li>
             <li class="links"><img src="../img/box.svg" alt="icone de estoque"><a href="estoque.php">Estoque</a></li>
             <li class="links"><img src="../img/truck.svg" alt="icone de Fornecedor"><a href="../src/fornecedor.php">Fornecedores</a></li>
-            <li class="links"><img src="../img/shopping-cart.svg" alt="icone de pedidos"><a href="pedidos.html" rel="noopener noreferrer">Pedidos</a></li>
-            <li class="links"><img src="../img/user.svg" alt="icone de usuario"><a href="usuarios.html">Usuarios</a></li>
-            <li class="links"><img src="../img/store.svg" alt="icone de loja"><a href="loja.html">Loja</a></li>
+            <li class="links"><img src="../img/shopping-cart.svg" alt="icone de pedidos"><a href="../src/pedidos.php" rel="noopener noreferrer">Pedidos</a></li>
+            <li class="links"><img src="../img/user.svg" alt="icone de usuario"><a href="../src/usuarios.php">Usuarios</a></li>
+            <li class="links"><img src="../img/store.svg" alt="icone de loja"><a href="../src/loja.php">Loja</a></li>
         </ul>
     </nav>
 <div class="container my-5 main"> 
-  <h2>Nova Loja</h2>
+  <h2>Editar Loja</h2>
 
     <?php 
       if (!empty($errorMessage)) {
@@ -137,43 +137,43 @@ $sucessMessage = "";
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Nome</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="nome" value="<?php echo $nome; ?>">
+            <input type="text" class="form-control" name="nome" placeholder="empresa" value="<?php echo $nome; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Cnpj</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="cnpj" value="<?php echo $cnpj; ?>">
+            <input type="text" class="form-control" name="cnpj" minlength="14" maxlength="14" placeholder="insira o cnpj" value="<?php echo $cnpj; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Telefone</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="telefone" value="<?php echo $telefone; ?>">
+            <input type="text" class="form-control" name="telefone" minlength="11" maxlength="11" placeholder="(xx) xxxxxxxxx" value="<?php echo $telefone; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Celular</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="celular" value="<?php echo $celular ?>">
+            <input type="text" class="form-control" name="celular" minlength="11" maxlength="11" placeholder="(xx) xxxxxxxxx" value="<?php echo $celular ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">cep</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="cep" value="<?php echo $cep; ?>">
+            <input type="text" class="form-control" name="cep" minlength="9" maxlength="9" placeholder="insira o seu Cep" value="<?php echo $cep; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Cidade</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="cidade" value="<?php echo $cidade; ?>">
+            <input type="text" class="form-control" name="cidade" placeholder="insira a sua cidade" value="<?php echo $cidade; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Rua</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="rua" value="<?php echo $rua; ?>">
+            <input type="text" class="form-control" name="rua" placeholder="insira a sua rua" value="<?php echo $rua; ?>">
           </div>
       </div>
       <div class="row mb-3">

@@ -78,14 +78,14 @@ verification('/index.php')
 </head>
 <body>
 <nav class="nav-menu">
-        <div class="logo"><h1>Ako box</h1></div>
+        <div class="logo"><img class="img-logo" src="../img/box.png" alt=""></div>
         <ul class="list">
             <li class="links"><img src="../img/home.svg" alt="icone de casa"><a href="../src/home.php">Home</a></li>
             <li class="links"><img src="../img/box.svg" alt="icone de estoque"><a href="../src/estoque.php">Estoque</a></li>
             <li class="links"><img src="../img/truck.svg" alt="icone de Fornecedor"><a href="../src/fornecedor.php">Fornecedores</a></li>
-            <li class="links"><img src="../img/shopping-cart.svg" alt="icone de pedidos"><a href=";pedidos.html" rel="noopener noreferrer">Pedidos</a></li>
-            <li class="links"><img src="../img/user.svg" alt="icone de usuario"><a href="usuarios.html">Usuarios</a></li>
-            <li class="links"><img src="../img/store.svg" alt="icone de loja"><a href="loja.html">Loja</a></li>
+            <li class="links"><img src="../img/shopping-cart.svg" alt="icone de pedidos"><a href="../src/pedidos.php" rel="noopener noreferrer">Pedidos</a></li>
+            <li class="links"><img src="../img/user.svg" alt="icone de usuario"><a href="../src/usuarios.php">Usuarios</a></li>
+            <li class="links"><img src="../img/store.svg" alt="icone de loja"><a href="../src/loja.php">Loja</a></li>
         </ul>
     </nav>
 <div class="container my-5 main"> 
@@ -105,44 +105,44 @@ verification('/index.php')
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Nome</label>
           <div class="col-sm-6">
-            <input type="text" data-ls-module="charCounter" maxlength="20" class="form-control" name="nome" value="<?php echo $nome; ?>">
+            <input type="text" data-ls-module="charCounter" maxlength="20" class="form-control" name="nome"  placeholder="empresa" value="<?php echo $nome; ?>">
           
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Cnpj</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="cnpj" value="<?php echo $cnpj; ?>">
+            <input type="text" class="form-control" name="cnpj" placeholder="insira o cnpj" value="<?php echo $cnpj; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Telefone</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="telefone" value="<?php echo $telefone; ?>">
+            <input type="text" class="form-control" name="telefone" placeholder="(xx) xxxxxxxx" value="<?php echo $telefone; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Celular</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="celular" value="<?php echo $celular; ?>">
+            <input type="number" class="form-control" name="celular" min="11" max="11" placeholder="(xx) xxxxxxxxx" value="<?php echo $celular; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">CEP</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="cep" value="<?php echo $cep; ?>">
+            <input type="text" class="form-control" name="cep" placeholder="insira o seu Cep" value="<?php echo $cep; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Cidade</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="cidade" value="<?php echo $cidade; ?>">
+            <input type="text" class="form-control" name="cidade" placeholder="insira sua cidade" value="<?php echo $cidade; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Rua</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="rua" value="<?php echo $rua; ?>">
+            <input type="text" class="form-control" name="rua" placeholder="insira a sua rua" value="<?php echo $rua; ?>">
           </div>
       </div>
       <div class="row mb-3">

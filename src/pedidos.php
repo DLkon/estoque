@@ -22,9 +22,10 @@ verification('/index.php')
             <li class="links"><img src="../img/home.svg" alt="icone de casa"><a href="home.php">Home</a></li>
             <li class="links"><img src="../img/box.svg" alt="icone de estoque"><a href="estoque.php">Estoque</a></li>
             <li class="links"><img src="../img/truck.svg" alt="icone de Fornecedor"><a href="fornecedor.php">Fornecedor</a></li>
-            <li class="links"><img src="../img/shopping-cart.svg" alt="icone de pedidos"><a href="pedidos.php" rel="noopener noreferrer">Pedidos</a></li>
+            <li class="links"><img src="../img/shopping-cart.svg" alt="icone de pedidos"><a style="color:#ffbd59" href="pedidos.php" rel="noopener noreferrer">Pedidos</a></li>
             <li class="links"><img src="../img/user.svg" alt="icone de usuario"><a href="usuarios.php">Usuarios</a></li>
             <li class="links"><img src="../img/store.svg" alt="icone de loja"><a href="loja.php">Loja</a></li>
+            <a class="btn btn-dark" href="../processos/logout.php">Logout</a></li>
         </ul>
     </nav>
     <main>

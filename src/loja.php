@@ -23,7 +23,8 @@ verification('/index.php')
             <li class="links"><img src="../img/truck.svg" alt="icone de Fornecedor"><a href="../src/fornecedor.php">Fornecedores</a></li>
             <li class="links"><img src="../img/shopping-cart.svg" alt="icone de pedidos"><a href="pedidos.php" rel="noopener noreferrer">Pedidos</a></li>
             <li class="links"><img src="../img/user.svg" alt="icone de usuario"><a href="usuarios.php">Usuarios</a></li>
-            <li class="links"><img src="../img/store.svg" alt="icone de loja"><a href="loja.php">Loja</a></li>
+            <li class="links"><img src="../img/store.svg" alt="icone de loja"><a style="color:#ffbd59" href="loja.php">Loja</a></li>
+            <a class="btn btn-dark" href="../processos/logout.php">Logout</a></li>
         </ul>
     </nav>
     <main>

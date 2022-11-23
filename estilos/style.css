@@ -17,6 +17,29 @@ body {
   color: white;
 }
 
+.bem-vindo {
+  margin-left: 48px;
+  display: flex;
+  justify-content: center;
+  padding: 8px 24px;
+  align-items: center;
+  width: 350px;
+  height: 520px;
+}
+
+.ilustration {
+  display: flex;
+  width: 60%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 48px;
+  margin-bottom: 48px;
+}
+
+.gato {
+  width: 30%;
+  height: auto;
+}
 a {
   text-decoration: none;
   color: white;
@@ -71,7 +94,7 @@ img {
 
 main {
   grid-area: main;
-  background-color: #1f1f1f;
+  background-color: #2d3b43;
   padding: 16px 32px;
 }
 

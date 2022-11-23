@@ -73,7 +73,7 @@ verification('/index.php')
 </head>
 <body>
 <nav class="nav-menu">
-        <div class="logo"><h1>Ako box</h1></div>
+        <div class="logo"><img class="img-logo" src="../img/box.png" alt=""></div>
         <ul class="list">
             <li class="links"><img src="../img/home.svg" alt="icone de casa"><a href="../src/home.php">Home</a></li>
             <li class="links"><img src="../img/box.svg" alt="icone de estoque"><a href="../src/estoque.php">Estoque</a></li>
@@ -100,31 +100,31 @@ verification('/index.php')
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">nome</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="nome" value="<?php echo $nome; ?>">
+            <input type="text" class="form-control" name="nome" placeholder="insira o nome do produto" value="<?php echo $nome; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">preco</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="preco" value="<?php echo $preco; ?>">
+            <input type="text" class="form-control" name="preco" placeholder="insira o preço do produto" value="<?php echo $preco; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">peso</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="peso" value="<?php echo $peso; ?>">
+            <input type="text" class="form-control" name="peso" placeholder="insira o peso do produto" value="<?php echo $peso; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Cateogria</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="categoria" value="<?php echo $categoria; ?>">
+            <input type="text" class="form-control" maxlength="200" name="categoria" value="<?php echo $categoria; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Quantidade</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="quantidade" value="<?php echo $quantidade; ?>">
+            <input type="text" class="form-control" maxlength="200"  name="quantidade" placeholder="insira a quantidade de produtos" value="<?php echo $quantidade; ?>">
           </div>
       </div>
       <div class="row mb-3">

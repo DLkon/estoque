@@ -91,7 +91,7 @@ if($conn->affected_rows == 0) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Document</title>
+    <title>Trocar Senha</title>
 </head>
 <body>
 <form method="post">
@@ -100,7 +100,7 @@ if($conn->affected_rows == 0) {
         <div>
           <label>Senha</label>
           <div>
-            <input type="text" name="senha">
+            <input type="password" name="senha">
           </div>
         </div>
 

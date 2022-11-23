@@ -1,16 +1,29 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../estilos/nova.css">
+</head>
+<body>
+<form method="post">
+<input type="hidden" name="id" value="<?php echo $id; ?>">
 
-$senha = "teste@123";
-$senhaCriptografada = "";
-          
-function criptografar($senha){
-  $arraySenha = str_split($senha);
-  $senhaReversa = array_reverse($arraySenha);
-  $senhaCriptografada = join("",$senhaReversa);
-  return $senhaCriptografada;
-}
 
+    <div>
+        <div class="senha">
+          <label>Senha</label>
+          <div>
+            <input type="text" name="senha">
+        </div>
 
- var_dump(criptografar($senha));
+        <div>
+          <button type="submit" class="btn btn-dark">Enviar</button>
+        </div>
 
-?>
+    </div>
+    
+</form>
+</body>

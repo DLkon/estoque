@@ -1,0 +1,30 @@
+body {
+    background-color: black; 
+     
+   }
+   
+   input {
+     border-radius: 5px;
+  
+     
+     
+   }
+ 
+   
+   .senha {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 15vh;
+     width: 320px;
+     padding: 46px;
+     color: rgb(2, 2, 2);
+     border-radius: 10px;
+     background-color: #312e81;
+     color: white;
+     
+   }
+ 
+     .button { 
+         border-radius: 12px;
+}

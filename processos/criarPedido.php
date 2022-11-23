@@ -63,7 +63,7 @@ verification('/index.php')
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Novo produto</title>
+  <title>Novo pedido</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -71,7 +71,7 @@ verification('/index.php')
 </head>
 <body>
 <nav class="nav-menu">
-        <div class="logo"><h1>Ako box</h1></div>
+        <div class="logo"><img class="img-logo" src="../img/box.png" alt=""></div>
         <ul class="list">
             <li class="links"><img src="../img/home.svg" alt="icone de casa"><a href="../src/home.php">Home</a></li>
             <li class="links"><img src="../img/box.svg" alt="icone de estoque"><a href="../src/estoque.php">Estoque</a></li>
@@ -98,13 +98,13 @@ verification('/index.php')
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Descrição</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="descricao" value="<?php echo $descricao; ?>">
+            <input type="text" class="form-control" maxlength="200" name="descricao" placeholder="descrição do pedido" value="<?php echo $descricao; ?>">
           </div>
       </div>
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Quantidade</label>
           <div class="col-sm-6">
-            <input type="number" class="form-control" id="quantidade" name="quantidade" value="<?php echo $quantidade; ?>">
+            <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="quantidade de itens" value="<?php echo $quantidade; ?>">
           </div>
       </div>
       <div class="row mb-3">
@@ -117,7 +117,7 @@ verification('/index.php')
       <div class="row mb-3">
           <label class="col-sm-3 col-form-label">Situação</label>
           <div class="col-sm-6">
-            <input type="text" class="form-control" name="situacao" value="<?php echo $situacao; ?>">
+            <input type="text" class="form-control" maxlength="200" name="situacao" value="<?php echo $situacao; ?>">
           </div>
       </div>
       <div class="row mb-3">
