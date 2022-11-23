@@ -37,7 +37,6 @@ verification('/index.php')
                     <th>Telefone</th>
                     <th>Endereço</th>
                     <th>CPF</th>  
-                    <th>Senha</th>  
                 </tr>
             </thead>
             <tbody>
@@ -58,7 +57,6 @@ verification('/index.php')
                     <td>$row[telefone]</td>
                     <td>$row[endereco]</td>
                     <td>$row[cpf]</td>
-                    <td>$row[senha]</td>
                     <td>
                         <a class='btn-sm' href='../processos/editarUsuario.php?id=$row[id]'>Editar</a>
                         <a class='btn-sm' href='../processos/deletarUsuario.php?id=$row[id]'>Deletar</a>

@@ -30,27 +30,46 @@ require_once('conexao.php');
           break;
         }
 
-        //adicionando novo usuario no banco de dados
-
+        //verifica se o email cumpre os requisistor de 3 caracteres antes e depois do @ e finalizar com .com etc
         $pattern = '/^([\w!?_.-]{3,10})+@([a-z]{3,10})+\.([a-z.]+)$/'; 
         $result = preg_match($pattern, $email);
         var_dump($result);
+
+        //verifica se a senha contem letra maiuscula minuscula e caracter especial
+        $patternsenha = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#!])(?:([0-9a-zA-Z$*&@!#])(?!\1)){10,100}$/';
+        $resultsenha = preg_match($patternsenha, $senha);
+        var_dump($resultsenha);
         
-        if($result != 0){
-        $sql = "INSERT INTO user (nome,email,telefone,endereco,cpf,senha)" . 
-        "VALUES ('$nome', '$email', '$telefone', '$endereco', '$cpf', '$senha')";
-        $result = $conn->query($sql);
+        if($result != 0 && $resultsenha != 0){
+        
+        /* 
+        algotirimo de criptografar senha
+        */
+        $senhaCriptografada = "";
+        function criptografar($senha){
+          $arraySenha = str_split($senha);
+          $senhaReversa = array_reverse($arraySenha);
+          $senhaCriptografada = join("",$senhaReversa);
+          return $senhaCriptografada;
+      }
 
 
-         //selecionar id de acordo com email
-        $consultaId =  "SELECT id FROM user where email = '$email'";
-        $resultado = mysqli_query($conexao, $consultaId);
+          $senhaCriptografada = criptografar($senha);
+          var_dump($senhaCriptografada);
+        //adicionando novo usuario no banco de dados
+          $sql = "INSERT INTO user (nome,email,telefone,endereco,cpf,senha)" . 
+          "VALUES ('$nome', '$email', '$telefone', '$endereco', '$cpf', '$senhaCriptografada')";
+          $result = $conn->query($sql);
 
-        $linhas = mysqli_fetch_row($resultado);
-        $id = $linhas[0];
 
-        $insereNovaSenha =  "INSERT INTO senha(id_usuario, senha, bloqueado, erro) VALUES('$id', '$senha', 0, 0)";
-        $conn->query($insereNovaSenha);
+        //selecionar id de acordo com email
+          $consultaId =  "SELECT id FROM user where email = '$email'";
+          $resultado = mysqli_query($conexao, $consultaId);
+          $linhas = mysqli_fetch_row($resultado);
+          $id = $linhas[0];
+
+          $insereNovaSenha =  "INSERT INTO senha(id_usuario, senha, bloqueado, erro) VALUES('$id', '$senhaCriptografada', 0, 0)";
+          $conn->query($insereNovaSenha);
         
         }else{
           $errorMessage = "email ou senha errados: " . $conn->error;

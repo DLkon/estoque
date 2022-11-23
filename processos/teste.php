@@ -1,6 +1,16 @@
 <?php
-$data = "2022-11-22 14:24:37";
-$teste = strtotime($data);
 
-echo $teste;
+$senha = "teste@123";
+$senhaCriptografada = "";
+          
+function criptografar($senha){
+  $arraySenha = str_split($senha);
+  $senhaReversa = array_reverse($arraySenha);
+  $senhaCriptografada = join("",$senhaReversa);
+  return $senhaCriptografada;
+}
+
+
+ var_dump(criptografar($senha));
+
 ?>
